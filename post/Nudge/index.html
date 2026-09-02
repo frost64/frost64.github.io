@@ -1,28 +1,562 @@
-<li class="post-row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
-  <div class="post-meta">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    Coming soon
+  <meta
+    name="description"
+    content="How Asjid Ahmed built Nudge, a full-stack MERN productivity web application, from idea to production."
+  >
 
-    <div class="tags">
-      <span class="tag">#nudge</span>
-      <span class="tag">#mern</span>
+  <title>Building Nudge: From Idea to Production — Asjid Ahmed</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="site-header">
+    <div class="container nav">
+
+      <div class="nav-left">
+
+        <a class="home-link" href="../../index.html">
+          ~/home
+        </a>
+
+        <a href="../../about/">
+          about
+        </a>
+
+        <a href="../../blog/">
+          blog
+        </a>
+
+        <a href="../../projects/">
+          projects
+        </a>
+
+      </div>
+
+      <div class="nav-right">
+
+        <button
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle theme"
+        >
+          ◐
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <!-- =========================
+       ARTICLE
+  ========================== -->
+
+  <main>
+
+    <article class="container article">
+
+      <p class="eyebrow">
+        // writing
+      </p>
+
+
+      <h1>
+        Building Nudge: From Idea to Production
+      </h1>
+
+
+      <div class="article-meta">
+        September 02, 2026 · #nudge · #mern · #fullstack
+      </div>
+
+
+
+      <p>
+        Nudge started with a simple idea: everyday information is often
+        scattered across too many different places.
+      </p>
+
+      <p>
+        Reminders might live in one application, notes somewhere else,
+        birthdays inside a calendar, and useful links buried in bookmarks
+        or messages.
+      </p>
+
+      <p>
+        I wanted to create one place where all of that information could
+        be organized and accessed easily.
+      </p>
+
+      <p>
+        That idea eventually became <strong>Nudge</strong>, a full-stack
+        productivity web application built using the MERN stack.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        The idea behind Nudge
+      </h2>
+
+      <p>
+        The goal was never to build another complicated productivity tool.
+        I wanted Nudge to remain simple and useful.
+      </p>
+
+      <p>
+        The application is designed around the kind of information people
+        deal with every day: reminders, notes, birthdays, saved links,
+        and other things that are useful but easy to forget.
+      </p>
+
+      <p>
+        Instead of having that information spread across several different
+        services, Nudge brings it together inside one centralized dashboard.
+      </p>
+
+      <p>
+        What started as a relatively straightforward idea eventually became
+        a much larger engineering project involving authentication,
+        databases, APIs, responsive design, external services,
+        deployment, and production infrastructure.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Choosing the stack
+      </h2>
+
+      <p>
+        I built Nudge using the MERN stack.
+      </p>
+
+      <p>
+        The frontend is built with <strong>React</strong> and
+        <strong>Vite</strong>, while the backend uses
+        <strong>Node.js</strong> and <strong>Express.js</strong>.
+      </p>
+
+      <p>
+        The application uses <strong>MongoDB</strong> for storing data
+        and <strong>Mongoose</strong> for defining models and interacting
+        with the database.
+      </p>
+
+      <p>
+        The wider production stack also includes JWT, Google OAuth,
+        Resend, the OpenWeather API, MongoDB Atlas, Vercel, and Render.
+      </p>
+
+      <p>
+        Using this stack allowed me to work across the entire application,
+        from building interfaces in React to creating backend APIs,
+        designing database models, and deploying the final product.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Building authentication
+      </h2>
+
+      <p>
+        Authentication became one of the most important parts of Nudge
+        because every user's information needs to remain associated
+        with their own account.
+      </p>
+
+      <p>
+        I implemented JWT-based authentication for the application's
+        traditional registration and login flow.
+      </p>
+
+      <p>
+        I also added <strong>Google Sign-In</strong>, giving users the
+        option to authenticate through their Google account instead.
+      </p>
+
+      <p>
+        The authentication system eventually grew to include
+        email OTP verification and password recovery as well.
+      </p>
+
+      <p>
+        This was one of the areas where the difference between building
+        a simple demo and building a production application became
+        particularly clear.
+      </p>
+
+      <p>
+        Authentication is not just a login form. Registration,
+        verification, login, recovery, account state, and different
+        authentication methods all need to work together as one system.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Building the core features
+      </h2>
+
+      <p>
+        The main functionality of Nudge revolves around helping users
+        organize their everyday information.
+      </p>
+
+      <p>
+        Users can manage reminders, notes, birthdays, saved links,
+        and other everyday tasks through the application.
+      </p>
+
+      <p>
+        Each of these features required both frontend and backend work.
+        The interface needs to make creating and managing information easy,
+        while the backend needs to store and retrieve that information
+        correctly for each authenticated user.
+      </p>
+
+      <p>
+        Building these features helped me think about the application less
+        as a collection of individual pages and more as one connected system.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Adding global search
+      </h2>
+
+      <p>
+        As more information is stored inside an application, finding
+        something becomes just as important as saving it.
+      </p>
+
+      <p>
+        I added global search so users can find information across Nudge
+        without having to manually navigate through every individual section.
+      </p>
+
+      <p>
+        From the user's perspective it is a relatively small feature,
+        but it makes the different parts of the application feel much more
+        connected.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Working with external services
+      </h2>
+
+      <p>
+        Nudge also gave me experience integrating external services into
+        a production application.
+      </p>
+
+      <p>
+        I integrated the <strong>OpenWeather API</strong> to provide
+        weather information directly inside the application.
+      </p>
+
+      <p>
+        Email functionality uses <strong>Resend</strong>, which supports
+        flows such as OTP verification and password recovery.
+      </p>
+
+      <p>
+        I also implemented calendar export functionality so information
+        from Nudge can be used alongside a user's existing calendar.
+      </p>
+
+      <p>
+        Working with these integrations helped me understand that modern
+        applications rarely operate completely in isolation.
+      </p>
+
+      <p>
+        Different services need to communicate reliably while still
+        providing users with one consistent experience.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Profile management
+      </h2>
+
+      <p>
+        I also built profile management into Nudge so users can manage
+        their account information after creating an account.
+      </p>
+
+      <p>
+        This is one of those features that can seem secondary during
+        the early stages of a project, but it becomes important once
+        the application starts behaving like a real product instead
+        of just a technical prototype.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Making Nudge responsive
+      </h2>
+
+      <p>
+        Responsiveness became another major part of the project.
+      </p>
+
+      <p>
+        A productivity application needs to work well beyond a desktop
+        browser. Someone might want to quickly check a reminder,
+        create a note, or save something while using a phone or tablet.
+      </p>
+
+      <p>
+        Because of that, I worked on responsive layouts throughout
+        the application instead of treating mobile support as something
+        separate to add later.
+      </p>
+
+      <p>
+        Nudge also includes both light and dark themes, allowing the
+        interface to adapt to different user preferences.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        From development to production
+      </h2>
+
+      <p>
+        One of the most valuable parts of building Nudge was taking it
+        beyond localhost.
+      </p>
+
+      <p>
+        Running an application locally is very different from making
+        its frontend, backend, database, environment configuration,
+        and external services work together in production.
+      </p>
+
+      <p>
+        Nudge uses <strong>Vercel</strong> for the frontend,
+        <strong>Render</strong> for the backend, and
+        <strong>MongoDB Atlas</strong> for the production database.
+      </p>
+
+      <p>
+        Going through that process gave me hands-on experience deploying
+        and maintaining a complete full-stack application rather than
+        stopping once the development environment worked.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        What building Nudge taught me
+      </h2>
+
+      <p>
+        One of the biggest things I learned from Nudge is that building
+        a production application is very different from implementing
+        individual features.
+      </p>
+
+      <p>
+        A feature might work correctly on its own, but the real challenge
+        is making the frontend, backend, authentication, database,
+        APIs, external services, responsive layouts, and deployment
+        all work together.
+      </p>
+
+      <p>
+        I also learned how much a project changes through iteration.
+      </p>
+
+      <p>
+        Features that initially appear simple can affect several other
+        parts of the application, while decisions made early in development
+        often become much more important as the project grows.
+      </p>
+
+      <p>
+        Working through those problems has been one of the most valuable
+        parts of the project.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        What's next
+      </h2>
+
+      <p>
+        Nudge is not something I consider finished.
+      </p>
+
+      <p>
+        There will always be things that can be made simpler, faster,
+        more reliable, or easier to use.
+      </p>
+
+      <p>
+        More importantly, the project gives me somewhere to continuously
+        apply what I learn about frontend development, backend systems,
+        databases, authentication, APIs, deployment, and product design.
+      </p>
+
+      <p>
+        That has made building Nudge much more valuable than simply
+        creating another project for a portfolio.
+      </p>
+
+
+
+      <!-- =========================
+           SECTION
+      ========================== -->
+
+      <h2>
+        Try Nudge
+      </h2>
+
+      <p>
+        Nudge is currently live at
+        <a
+          href="https://nudgere.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          nudgere.com ↗
+        </a>
+      </p>
+
+
+
+      <!-- BACK TO BLOG -->
+
+      <p>
+        <a href="../../blog/">
+          ← all posts
+        </a>
+      </p>
+
+    </article>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <span>
+        © 2026 Asjid Ahmed
+      </span>
+
+      <span>
+
+        <a
+          href="https://github.com/frost64"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>
+
+        ·
+
+        <a
+          href="https://www.linkedin.com/in/asjid-ahmed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin
+        </a>
+
+        ·
+
+        <a href="mailto:asjidahmed6@gmail.com">
+          email
+        </a>
+
+      </span>
+
     </div>
 
-  </div>
+  </footer>
 
 
-  <div>
+  <script src="../../js/theme.js"></script>
 
-    <h3>
-      Building Nudge: From Idea to Production
-    </h3>
-
-    <p>
-      A future write-up about designing, developing,
-      deploying, and improving a production MERN application.
-    </p>
-
-  </div>
-
-</li>
+</body>
+</html>
