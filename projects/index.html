@@ -1,72 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Projects — Your Name</title>
-  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Personal website, projects, and writing.">
-<link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Projects by Asjid Ahmed — full-stack applications, data science work, and software development projects."
+  >
+
+  <title>Projects — Asjid Ahmed</title>
+
+  <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container nav">
-    <div class="nav-left">
-      <a class="home-link" href="../index.html">~/home</a>
-      <a href="../about/">about</a>
-      <a href="../blog/">blog</a>
-      <a href="../projects/">projects</a>
-    </div>
-    <div class="nav-right">
-      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">◐</button>
-    </div>
-  </div>
-</header>
+  <!-- =========================
+       HEADER
+  ========================== -->
 
-<main>
-  <section class="page-header">
-    <div class="container">
-      <p class="eyebrow">// projects</p>
-      <h1>Things I've built.</h1>
-      <p>A selection of projects, experiments, and products.</p>
-    </div>
-  </section>
+  <header class="site-header">
+    <div class="container nav">
 
-  <section class="section">
-    <div class="container project-grid">
-      <a class="project-card" href="#">
-        <div>
-          <small>01 · Full Stack</small>
-          <h2>Nudge</h2>
-          <p>A productivity application for organizing reminders, notes, birthdays, links, and personal information.</p>
+      <div class="nav-left">
+
+        <a class="home-link" href="../index.html">
+          ~/home
+        </a>
+
+        <a href="../about/">
+          about
+        </a>
+
+        <a href="../blog/">
+          blog
+        </a>
+
+        <a href="./">
+          projects
+        </a>
+
+      </div>
+
+      <div class="nav-right">
+
+        <button
+          class="theme-toggle"
+          data-theme-toggle
+          aria-label="Toggle theme"
+        >
+          ◐
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================== -->
+
+  <main>
+
+
+    <!-- =========================
+         PAGE HEADER
+    ========================== -->
+
+    <section class="page-header">
+
+      <div class="container">
+
+        <p class="eyebrow">
+          // projects
+        </p>
+
+        <h1>
+          Things I've built.
+        </h1>
+
+        <p>
+          A collection of full-stack applications, data-driven projects,
+          and software I've built while learning, experimenting, and solving
+          practical problems.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container project-grid">
+
+
+        <!-- =====================
+             PROJECT 01 — NUDGE
+        ====================== -->
+
+        <a
+          class="project-card"
+          href="https://nudgere.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <div>
+
+            <small>
+              01 · Full-Stack MERN · 2026
+            </small>
+
+            <h2>
+              Nudge
+            </h2>
+
+            <p>
+              A production productivity web application designed to help
+              users manage reminders, notes, birthdays, saved links,
+              and everyday information from one place.
+            </p>
+
+            <p>
+              Built with React, Vite, Node.js, Express.js, MongoDB,
+              Mongoose, JWT authentication, Google OAuth, Resend,
+              OpenWeather API, Vercel, Render, and MongoDB Atlas.
+            </p>
+
+          </div>
+
+          <span>
+            visit nudgere.com ↗
+          </span>
+
+        </a>
+
+
+
+        <!-- =====================
+             PROJECT 02
+        ====================== -->
+
+        <div class="project-card">
+
+          <div>
+
+            <small>
+              02 · Data Science · 2021–2022
+            </small>
+
+            <h2>
+              Review Based Analysis of Mobile Phones
+            </h2>
+
+            <p>
+              A web-based review analysis application created to automate
+              the analysis of mobile-phone reviews and make product review
+              evaluation more efficient.
+            </p>
+
+            <p>
+              Built using Python, React, Bootstrap, NLTK,
+              scikit-learn, and TextBlob.
+            </p>
+
+          </div>
+
+          <span>
+            Python · NLP · Machine Learning
+          </span>
+
         </div>
-        <span>view project →</span>
-      </a>
 
-      <a class="project-card" href="#">
-        <div>
-          <small>02 · Web</small>
-          <h2>Your Next Project</h2>
-          <p>Replace this card with another project and explain what problem it solves.</p>
+
+
+        <!-- =====================
+             PROJECT 03
+        ====================== -->
+
+        <div class="project-card">
+
+          <div>
+
+            <small>
+              03 · Web Development · 2021
+            </small>
+
+            <h2>
+              Art Gallery Management System
+            </h2>
+
+            <p>
+              A management system for handling art exhibitions,
+              artist profiles, customer profiles, and administrative
+              functionality.
+            </p>
+
+            <p>
+              Built with HTML, CSS, JavaScript, Bootstrap,
+              PHP, and MySQL.
+            </p>
+
+          </div>
+
+          <span>
+            PHP · MySQL · JavaScript
+          </span>
+
         </div>
-        <span>view project →</span>
-      </a>
-    </div>
-  </section>
-</main>
 
-<footer>
-  <div class="container footer-row">
-    <span>© 2026 Your Name</span>
-    <span>
-      <a href="https://github.com/YOURUSERNAME">github</a>
-      · <a href="mailto:you@example.com">email</a>
-    </span>
-  </div>
-</footer>
-<script src="../js/theme.js"></script>
+
+
+        <!-- =====================
+             PROJECT 04
+        ====================== -->
+
+        <div class="project-card">
+
+          <div>
+
+            <small>
+              04 · Desktop Application · 2018
+            </small>
+
+            <h2>
+              Tailor App
+            </h2>
+
+            <p>
+              A desktop GUI application for recording body measurements
+              for multiple clients and managing client measurement records.
+            </p>
+
+            <p>
+              Built using Python and Tkinter with local text-file storage.
+            </p>
+
+          </div>
+
+          <span>
+            Python · Tkinter
+          </span>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container footer-row">
+
+      <span>
+        © 2026 Asjid Ahmed
+      </span>
+
+      <span>
+
+        <a
+          href="https://github.com/frost64"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github
+        </a>
+
+        ·
+
+        <a
+          href="https://www.linkedin.com/in/asjidahmed"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin
+        </a>
+
+        ·
+
+        <a href="mailto:asjidahmed6@gmail.com">
+          email
+        </a>
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../js/theme.js"></script>
 
 </body>
 </html>
